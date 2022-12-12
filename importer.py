@@ -2,7 +2,8 @@ import pandas as pd
 from nltk.tokenize import word_tokenize, MWETokenizer
 
 def import_data():
-    df = pd.read_csv('../linkedindf.csv')
+    # df = pd.read_csv('../linkedindf.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/Raphaelsw/linkd-website/main/linkedindf.csv?token=GHSAT0AAAAAAB4IGWFLUE56IQ4PQXT7ZXR4Y4XR7LA')
     # df.head()
 
     # for col in df.select_dtypes(include=['object']):
