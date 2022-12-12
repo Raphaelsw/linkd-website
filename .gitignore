@@ -1,7 +1,7 @@
 setup.py
-setup.sh
+# setup.sh
 README.md
 MANIFEST.in
-Procfile
+# Procfile
 Makefile
 __pycache__/
