@@ -1,3 +1,5 @@
 streamlit
-typing_extensions
-geopy
+matplotlib
+numpy
+pandas
+nltk

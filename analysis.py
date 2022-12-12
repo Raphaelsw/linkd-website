@@ -1,7 +1,4 @@
 import streamlit as st
-import time
-import pandas as pd
-import matplotlib.pyplot as plt
 from importer import import_data
 from charts import make_charts, make_charts_horizontal, filtered_keywords
 
