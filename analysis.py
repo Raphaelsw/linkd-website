@@ -121,9 +121,9 @@ keywords = keywords_programming + keywords_libraries + keywords_analyst_tools + 
 if analysis_type == "General data":
 
     if orientation == False:
-        make_charts(column = st.session_state.job, size = top_n_choice, chart_type = graph_choice)
+        make_charts(df, column = st.session_state.job, size = top_n_choice, chart_type = graph_choice)
     else:
-        make_charts_horizontal(column = st.session_state.job, size = top_n_choice)
+        make_charts_horizontal(df, column = st.session_state.job, size = top_n_choice)
 
 else:
     if prog_choice == 'Programming languages':
