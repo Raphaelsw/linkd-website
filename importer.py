@@ -2,7 +2,8 @@ import pandas as pd
 from nltk.tokenize import word_tokenize, MWETokenizer
 import nltk
 
-nltk.download('punkt')
+if __name__ == '__main__':
+    nltk.download('punkt')
 
 def import_data():
     # df = pd.read_csv('../linkedindf.csv')
