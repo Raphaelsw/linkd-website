@@ -15,6 +15,7 @@ def make_charts(df, column = 'Job function', size = 10, chart_type = 'Bar'):
     fig, ax = plt.subplots(figsize=(7, 3))
     if chart_type == 'Bar':
         ax.bar(x[:size], y[:size])
+        ax.set_ylabel("Number of postings")
     else:
         ax.pie(y[:size], labels = x[:size])
     ax.set_title(f'{column}', fontsize = 14)
@@ -35,6 +36,7 @@ def make_charts_horizontal(df, column = 'Job function', size = 10):
 
     # Horizontal Bar Plot
     ax.barh(x[:size], y[:size])
+    ax.set_xlabel("Number of postings")
 
     # Remove axes splines
     for s in ['top', 'bottom', 'left', 'right']:

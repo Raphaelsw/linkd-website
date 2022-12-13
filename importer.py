@@ -3,10 +3,11 @@ from nltk.tokenize import word_tokenize, MWETokenizer
 import nltk
 
 nltk.download('punkt')
+df = pd.read_csv('https://raw.githubusercontent.com/Raphaelsw/linkd-website/main/linkedindf.csv')
 
 def import_data():
     # df = pd.read_csv('../linkedindf.csv')
-    df = pd.read_csv('https://raw.githubusercontent.com/Raphaelsw/linkd-website/main/linkedindf.csv')
+
     # df.head()
 
     # for col in df.select_dtypes(include=['object']):
