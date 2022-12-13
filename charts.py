@@ -4,10 +4,6 @@ import numpy as np
 import pandas as pd
 from importer import import_data
 
-# Import Data
-# df = import_data()
-
-
 def make_charts(df, column = 'Job function', size = 10, chart_type = 'Bar'):
     x = []
     y = []
@@ -81,7 +77,9 @@ def make_charts_horizontal(df, column = 'Job function', size = 10):
 
 
 
-def filtered_keywords(df, keywords, title="Keyword Analysis", head=10):
+def filtered_keywords(keywords, title="Keyword Analysis", head=10):
+    df = import_data()
+
     # get keywords in a column
     count_keywords = pd.DataFrame(df.description_tokens.sum()).value_counts().rename_axis('keywords').reset_index(name='counts')
 

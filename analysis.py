@@ -1,7 +1,6 @@
 import streamlit as st
-from importer import import_data
+import pandas as pd
 from charts import make_charts, make_charts_horizontal, filtered_keywords
-
 
 st.set_page_config('Linkedin in Tel Aviv')
 '''
@@ -9,7 +8,7 @@ st.set_page_config('Linkedin in Tel Aviv')
 '''
 
 # Import Data
-df = import_data()
+df = pd.read_csv('https://raw.githubusercontent.com/Raphaelsw/linkd-website/main/linkedindf.csv')
 
 
 # Top page build
@@ -127,6 +126,6 @@ if analysis_type == "General data":
 
 else:
     if prog_choice == 'Programming languages':
-        filtered_keywords(df, keywords_programming, title= f"Top {top_n_choice} Programming Languages", head = top_n_choice)
+        filtered_keywords(keywords_programming, title= f"Top {top_n_choice} Programming Languages", head = top_n_choice)
     else:
-        filtered_keywords(df, keywords, title= f"Top {top_n_choice} tokens", head = top_n_choice)
+        filtered_keywords(keywords, title= f"Top {top_n_choice} tokens", head = top_n_choice)
