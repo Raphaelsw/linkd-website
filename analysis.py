@@ -1,6 +1,10 @@
 import streamlit as st
 from importer import import_data
 from charts import make_charts, make_charts_horizontal, filtered_keywords
+import nltk
+
+nltk.download('punkt')
+
 
 st.set_page_config('Linkedin in Tel Aviv')
 '''
